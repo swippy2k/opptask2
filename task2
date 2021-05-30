@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Task7 {
+    public static void main(String[] args) {
+        var sc = new Scanner(System.in);
+        System.out.println("Введите количество элементов массива");
+        var n = sc.nextInt();
+        int[] numbers = getNumbers(n, sc);
+        // Сортировать по возрастанию
+        Array.sort(numbers);
+        System.out.println("Массив после сортировки по возрастанию: ");
+        Array.showArray1(numbers);
+        // Сортировать по  расположению
+        Arrays2.sortDESC(numbers);
+        System.out.println("Массив после сортировки по  расположению: ");
+        Arrays2.showArray2(numbers);
+    }
+
+    private static int[] getNumbers(int n, Scanner sc) {
+        var numbers = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("Введите элемент " + (i + 1) + ": ");
+            numbers[i] = sc.nextInt();
+        }
+        return numbers;
+    }
+}
