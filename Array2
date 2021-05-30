@@ -1,0 +1,19 @@
+public class Arrays2 {
+    public static void sortDESC(int[] numbers) {
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = numbers.length - 1; j > i; j--) {
+                if (numbers[j] > numbers[i]){
+                    var x = numbers[j];
+                    numbers[j] = numbers[i];
+                    numbers[i] = x;
+                }
+            }
+        }
+    }
+    static void showArray2(int[] numbers) {
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print(numbers[i] + " ");
+        }
+        System.out.println();
+    }
+}
